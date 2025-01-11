@@ -1,3 +1,7 @@
+# Build Files
+dist
+.DS_Store
+
 # Node modules
 node_modules/
 */node_modules/
@@ -5,7 +9,3 @@ node_modules/
 # Package lock files
 package-lock.json
 */package-lock.json
-
-# Build Files
-dist
-.DS_Store
