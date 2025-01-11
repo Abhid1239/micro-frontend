@@ -6,7 +6,7 @@ export default () => {
     return (
         <div >
             <MarketingApp />
-
+            {/* Creating a trigger for workflow */}
         </div>
     )
 }
