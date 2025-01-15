@@ -4,6 +4,7 @@ import App from "./App";
 import { createMemoryHistory, createBrowserHistory } from "history";
 
 const mount = (el, {
+    onSignIn,
     initialPath,
     onNavigate,
     defaultHistory
@@ -17,9 +18,8 @@ const mount = (el, {
         if (onNavigate) {
             history.listen(onNavigate);
         }
-
         ReactDOM.render(
-            <App history={history} />,
+            <App history={history} onSignIn={onSignIn} />,
             el
         )
 

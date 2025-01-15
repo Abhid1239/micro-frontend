@@ -2,7 +2,7 @@ import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-export default () => {
+export default ({ onSignIn }) => {
     const ref = useRef();
     const history = useHistory();
     useEffect(() => {
@@ -15,7 +15,8 @@ export default () => {
         }
         const { onParentNavigate } = mount(ref.current, {
             initialPath: history.location.pathname,
-            onNavigate: historyCallbackFunction
+            onNavigate: historyCallbackFunction,
+            onSignIn
         })
         history.listen((...params) => {
             console.log("Container Location", history.location.pathname)
