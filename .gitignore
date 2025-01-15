@@ -9,3 +9,4 @@ package-lock.json
 # Build Files
 dist
 .DS_Store
+mfp/mfp-github-action_accessKeys.csv
