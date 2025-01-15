@@ -5,6 +5,9 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const packageJSon = require("../package.json");
 const devConfig = {
     mode: 'development',
+    output: {
+        publicPath: 'http://localhost:8080/'
+    },
     devServer: {
         port: 8080,
         historyApiFallback: true
