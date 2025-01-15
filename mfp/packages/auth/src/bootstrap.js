@@ -9,19 +9,13 @@ const mount = (el, {
     defaultHistory
 }) => {
     if (el) {
+        console.log("auth")
         const history = defaultHistory || createMemoryHistory({
             initialEntries: [initialPath]
         });
-        console.log("Marketing", history)
 
         if (onNavigate) {
-            // console.log("Marketing onNavigate")
-            // onNavigate(history.location);
-
-            history.listen((...params) => {
-                console.log("Marketing Location", history.location.pathname)
-                onNavigate(...params);
-            });
+            history.listen(onNavigate);
         }
 
         ReactDOM.render(
@@ -31,7 +25,6 @@ const mount = (el, {
 
         return {
             onParentNavigate({ pathname: nextPathName }) {
-                console.log("Marketing", nextPathName, "callback")
                 const { pathname } = history.location;
                 if (pathname !== nextPathName) {
                     history.push(nextPathName);
@@ -42,9 +35,8 @@ const mount = (el, {
 }
 
 if (process.env.NODE_ENV == "development") {
-    const devRoot = document.querySelector("#_marketing-dev-root");
+    const devRoot = document.querySelector("#_auth-dev-root");
     if (devRoot) {
-        console.log("Container", devRoot)
         mount(devRoot, {
             defaultHistory: createBrowserHistory()
         });

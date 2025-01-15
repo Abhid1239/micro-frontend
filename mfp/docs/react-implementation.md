@@ -2,7 +2,7 @@
 
 The project is structured using a monorepo approach with multiple packages located in `mfp/packages/`:
 
-- auth: Authentication related features
+- auth: auth related features
 - container: Main application shell/container
 - dashboard: Dashboard application
 - marketing: Marketing/landing pages
