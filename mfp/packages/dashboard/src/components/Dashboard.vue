@@ -253,10 +253,6 @@
 </template>
 
 <script>
-import 'primevue/resources/themes/saga-blue/theme.css';
-import 'primevue/resources/primevue.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
 
 import Checkbox from 'primevue/checkbox';
 import Panel from 'primevue/panel';
@@ -343,7 +339,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @media screen and (max-width: 960px) {
   ::v-deep(.p-datatable) {
     &.p-datatable-customers {
@@ -563,6 +559,7 @@ p {
 }
 /* Footer */
 $footerBgColor: #ffffff;
+
 .dashboard {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
